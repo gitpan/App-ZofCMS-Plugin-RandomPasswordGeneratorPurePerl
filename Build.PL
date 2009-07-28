@@ -14,7 +14,7 @@ my $builder = Module::Build->new(
         'App::ZofCMS::Test::Plugin' => '0.0104',
     },
     requires => {
-        'Digest::MD5'               => 2.36_01,
+        'Digest::MD5'               => '2.36_01',
         'App::ZofCMS::Plugin::Base' => 0.0103,
     },
     add_to_cleanup      => [ 'App-ZofCMS-Plugin-RandomPasswordGeneratorPurePerl-*' ],

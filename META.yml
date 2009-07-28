@@ -1,22 +1,24 @@
 ---
 name: App-ZofCMS-Plugin-RandomPasswordGeneratorPurePerl
-version: 0.0101
+version: 0.0102
 author:
   - "'Zoffix <'zoffix@cpan.org'>"
 abstract: easily generate random passwords with an option to use md5_hex from Digest::MD5 on them | Pure perl solution
 license: perl
 resources:
   license: http://dev.perl.org/licenses/
-requires:
-  App::ZofCMS::Plugin::Base: 0.0103
-  Digest::MD5: 2.3601
 build_requires:
   Test::More: 0
+requires:
+  App::ZofCMS::Plugin::Base: 0.0103
+  Digest::MD5: 2.36_01
+configure_requires:
+  Module::Build: 0.34
 provides:
   App::ZofCMS::Plugin::RandomPasswordGeneratorPurePerl:
     file: lib/App/ZofCMS/Plugin/RandomPasswordGeneratorPurePerl.pm
-    version: 0.0101
-generated_by: Module::Build version 0.280801
+    version: 0.0102
+generated_by: Module::Build version 0.34
 meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.2.html
-  version: 1.2
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4

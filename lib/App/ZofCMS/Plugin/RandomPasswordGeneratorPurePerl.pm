@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::RandomPasswordGeneratorPurePerl;
 use warnings;
 use strict;
 
-our $VERSION = '0.0101';
+our $VERSION = '0.0102';
 use Digest::MD5 qw/md5_hex/;
 use base 'App::ZofCMS::Plugin::Base';
 
@@ -241,6 +241,7 @@ See four examples in the beginning of this section if you are still confused.
 =head1 AUTHOR
 
 'Zoffix, C<< <'zoffix at cpan.org'> >>
+(L<http://haslayout.net/>, L<http://zoffix.com/>, L<http://zofdesign.com/>)
 
 =head1 BUGS
 
