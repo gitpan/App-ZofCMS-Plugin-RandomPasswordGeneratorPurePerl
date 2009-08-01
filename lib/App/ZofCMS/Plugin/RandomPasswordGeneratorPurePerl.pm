@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::RandomPasswordGeneratorPurePerl;
 use warnings;
 use strict;
 
-our $VERSION = '0.0102';
+our $VERSION = '0.0103';
 use Digest::MD5 qw/md5_hex/;
 use base 'App::ZofCMS::Plugin::Base';
 
@@ -103,8 +103,20 @@ Self-explanatory: you need to include the plugin in the list of plugins to run.
         pass_num => 1,
     },
 
+    plug_random_password_generator_pure_perl => sub {
+        my ( $t, $q, $config ) = @_;
+        return {
+            length   => 8,
+        },
+    },
+
 B<Mandatory>. The plugin won't run unless C<plug_random_password_generator_pure_perl> first-level key
-is present. Takes a hashref as a value. To run the plugin with all the defaults specify an
+is present. Takes a hashref or a subref as a value. If subref is specified,
+its return value will be assigned to C<plug_random_password_generator_pure_perl>
+as if it was already there. If sub returns
+an C<undef>, then plugin will stop further processing. The C<@_> of the subref will
+contain (in that order): ZofCMS Tempalate hashref, query parameters hashref and
+L<App::ZofCMS::Config> object. To run the plugin with all the defaults specify an
 empty hashref as a value.
 The C<plug_random_password_generator_pure_perl> key can be set in either (or both) Main
 Config File and ZofCMS Template;
