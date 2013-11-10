@@ -3,8 +3,8 @@ package App::ZofCMS::Plugin::RandomPasswordGeneratorPurePerl;
 use warnings;
 use strict;
 
-our $VERSION = '0.0103';
-use Digest::MD5 qw/md5_hex/;
+our $VERSION = '0.0104';
+use Digest::MD5 (qw/md5_hex/);
 use base 'App::ZofCMS::Plugin::Base';
 
 sub _key { 'plug_random_password_generator_pure_perl_pure_perl' }
@@ -47,6 +47,8 @@ sub _do {
 
 1;
 __END__
+
+=encoding utf8
 
 =head1 NAME
 

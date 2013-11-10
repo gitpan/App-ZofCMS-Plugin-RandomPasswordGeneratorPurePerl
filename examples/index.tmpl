@@ -1,0 +1,12 @@
+{
+
+    plugins => [ qw/RandomPasswordGeneratorPurePerl/ ],
+    plug_random_password_generator_pure_perl_pure_perl => {
+        length   => 8,
+        chars    => [ 0..9, 'a'..'z', 'A'..'Z' ],
+        cell     => 'd',
+        key      => 'random_pass',
+        md5_hex  => 0,
+        pass_num => 1,
+    },
+}
